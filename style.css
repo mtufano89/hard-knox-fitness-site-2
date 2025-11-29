@@ -483,6 +483,13 @@ p {
   border: none;
   border-radius: 10px;
 }
+#google-reviews h2 {
+  margin-bottom: 1rem;
+}
+
+#google-reviews .commonninja_component {
+  margin-top: 1.5rem;
+}
 
 
 
@@ -598,5 +605,6 @@ p {
     padding: 2.4rem 0 1.6rem;
   }
 }
+
 
 
