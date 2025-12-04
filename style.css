@@ -125,75 +125,81 @@ a {
 
 /* Hero */
 .hero {
-  padding: 4rem 0 3rem;
-  background: radial-gradient(circle at top left, #1e293b 0, #020617 55%, #000 100%);
-  min-height: 80vh;
+  position: relative;
+  min-height: 100vh;              /* full screen height */
   display: flex;
   align-items: center;
+  justify-content: center;
+  padding: 0 1.5rem;
+  text-align: center;
+  color: #ffffff;
+
+  /* background image + dark overlay */
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("images/hero.background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.hero-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-  gap: 2.5rem;
-  align-items: center;
+/* Centered content */
+.hero-content {
+  max-width: 800px;
+  animation: heroFadeUp 0.8s ease-out 0.2s forwards;
+  opacity: 0;
+  transform: translateY(20px);
 }
 
-.hero-text h1 {
-  font-size: clamp(2.2rem, 3vw + 1rem, 3rem);
-  margin-bottom: 0.35rem;
+.hero-logo {
+  max-width: 220px;
+  margin: 0 auto 1.5rem;
+  display: block;
 }
 
-.hero-eyebrow {
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  font-size: 0.8rem;
-  color: var(--accent, #eab308);
+.hero h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
   margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
-.hero-subtitle {
-  color: var(--text-muted);
-  max-width: 32rem;
-  margin-bottom: 1.5rem;
+.hero-tagline {
+  font-size: 1.05rem;
+  margin-bottom: 1.8rem;
+  line-height: 1.6;
+  opacity: 0.9;
 }
 
 .hero-cta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
+  font-size: 1rem;
+  padding: 0.85rem 2.5rem;
+  border-radius: 999px;
 }
 
-.hero-meta {
-  font-size: 0.9rem;
-  color: var(--text-muted);
+/* Simple fade-up animation */
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.hero-secondary-btn {
-  border: 1px solid rgba(248, 250, 252, 0.35);
-  background: transparent;
+/* Optional: tweak on very small screens */
+@media (max-width: 600px) {
+  .hero {
+    padding: 0 1rem;
+  }
+
+  .hero-logo {
+    max-width: 170px;
+  }
 }
 
-.hero-image img {
-  max-width: 380px;   /* Reduce from 440 */
-  border-radius: 1.5rem;
-  object-fit: cover;
-  box-shadow: 0 25px 60px rgba(0,0,0,0.65);
-  margin-inline: auto;
-}
-.hero-image {
-  position: relative;
-}
-
-.hero-image::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 1.5rem;
-  background: radial-gradient(circle at center, #ffffff10, #00000000 70%);
-  z-index: -1;
-}
 
 
 
