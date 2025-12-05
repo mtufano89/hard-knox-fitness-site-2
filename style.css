@@ -891,6 +891,13 @@ p {
 
 
 
+/* Fix logo text wrapping on mobile */
+@media (max-width: 480px) {
+  .logo span {
+    font-size: 1rem;   /* shrink text */
+    white-space: nowrap; /* force single line */
+  }
+}
 
 
 
