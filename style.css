@@ -1025,5 +1025,15 @@ p {
   }
 }
 
+/* Mobile: use brightened hero image */
+@media (max-width: 600px) {
+  .hero::before {
+    background-image: url("images/hero-mobile.jpg") !important;
+    background-size: cover !important;
+    background-position: center top !important;
+    opacity: 1 !important; /* ensure full brightness */
+  }
+}
+
 
 
