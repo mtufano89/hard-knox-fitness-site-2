@@ -933,6 +933,30 @@ p {
   }
 }
 
+/* Mobile: keep HERO title on one line */
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 2.1rem;      /* smaller letters on mobile */
+    letter-spacing: 0.10em; /* less space between letters */
+    gap: 0.04em;            /* tighter gap between spans */
+  }
+}
+/* Mobile: center BOTH hero CTA buttons */
+@media (max-width: 600px) {
+  .hero-ctas {
+    flex-direction: column;      /* stack vertically */
+    justify-content: center;     /* center the group */
+    align-items: center;         /* center horizontally */
+    gap: 1rem;                   /* spacing between buttons */
+  }
+
+  .hero-cta,
+  .hero-cta-secondary {
+    width: 100%;
+    max-width: 320px;            /* keeps them nicely sized */
+    text-align: center;
+  }
+}
 
 
 
