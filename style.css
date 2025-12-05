@@ -989,6 +989,22 @@ p {
     flex: 0 0 auto;         /* each letter keeps its width, no wrapping */
   }
 }
+/* Mobile: make hero image fully visible */
+@media (max-width: 600px) {
+  .hero {
+    background-size: contain !important;     /* show entire image */
+    background-position: center top !important;
+    background-repeat: no-repeat;
+    background-color: #000;                  /* fills space below */
+    height: auto;
+    padding-top: 6rem;                       /* space for nav */
+    padding-bottom: 4rem;                    /* space below */
+  }
+
+  .hero-content {
+    padding-top: 2rem;
+  }
+}
 
 
 
