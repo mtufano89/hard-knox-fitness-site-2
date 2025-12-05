@@ -989,23 +989,25 @@ p {
     flex: 0 0 auto;         /* each letter keeps its width, no wrapping */
   }
 }
-/* Mobile: make hero image fully visible */
+
+/* Mobile: adjust HERO background so more of the image is visible */
 @media (max-width: 600px) {
   .hero {
-    background-size: contain !important;     /* show entire image */
+    min-height: 100vh;          /* full-screen height */
+  }
+
+  .hero::before {
+    background-size: contain !important;      /* show whole image */
     background-position: center top !important;
     background-repeat: no-repeat;
-    background-color: #000;                  /* fills space below */
-    height: auto;
-    padding-top: 6rem;                       /* space for nav */
-    padding-bottom: 4rem;                    /* space below */
+    opacity: 0.9;                             /* keep it visible but still dark */
   }
 
   .hero-content {
-    padding-top: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 }
-
 
 
 
