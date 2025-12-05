@@ -896,37 +896,44 @@ p {
 }
 
 
+/* --- MOBILE TWEAKS --- */
 
-/* Fix logo text wrapping on mobile */
+/* 1) Keep "Hard Knox Fitness" on one line in the logo */
 @media (max-width: 600px) {
   .main-header .logo span {
-    font-size: 0.9rem;
-    white-space: nowrap;      /* keep all on one line */
+    font-size: 0.9rem !important;
+    white-space: nowrap;
   }
 }
 
-/* Mobile nav: keep links in a row, put CTA centered underneath */
+/* 2) Keep nav links in a row, put Book Online centered underneath on mobile */
 @media (max-width: 768px) {
   .main-header .main-nav {
     display: flex;
-    flex-wrap: wrap;          /* allow items to go to next line */
+    flex-direction: row;   /* force horizontal row */
+    flex-wrap: wrap;       /* allow wrapping to next line */
     justify-content: center;
+    align-items: center;
     gap: 0.75rem;
   }
 
   .main-header .main-nav a {
+    flex: 0 0 auto;        /* keep links sized to content */
     text-align: center;
   }
 
+  /* Book Online CTA = its own centered row */
   .main-header .main-nav .btn-primary {
-    flex-basis: 100%;         /* force its own row */
+    flex-basis: 100%;
     width: auto;
     margin-top: 0.5rem;
     margin-left: auto;
-    margin-right: auto;       /* centers it */
+    margin-right: auto;
     text-align: center;
   }
 }
+
+
 
 
 
