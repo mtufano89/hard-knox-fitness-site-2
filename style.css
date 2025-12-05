@@ -975,6 +975,20 @@ p {
     padding-right: 1rem;
   }
 }
+/* Mobile: keep "HARD KNOX FITNESS" on one line in the HERO */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;        /* smaller letters on phones */
+    letter-spacing: 0.08em; /* less space between letters */
+    gap: 0.02em;            /* tighter gap between spans */
+    display: inline-flex;
+    flex-wrap: nowrap;      /* 🔥 don't allow wrapping to next line */
+  }
+
+  .hero-title .hero-letter {
+    flex: 0 0 auto;         /* each letter keeps its width, no wrapping */
+  }
+}
 
 
 
