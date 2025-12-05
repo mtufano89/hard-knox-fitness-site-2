@@ -1000,7 +1000,7 @@ p {
     background-size: contain !important;      /* show whole image */
     background-position: center top !important;
     background-repeat: no-repeat;
-    opacity: 0.3;                             /* keep it visible but still dark */
+    opacity: 0;                             /* keep it visible but still dark */
   }
 
   .hero-content {
